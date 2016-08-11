@@ -7,6 +7,9 @@ let mapleader=";"
 " 显示行号
 set number
 
+" 显示80列提示
+set cc=80
+
 " 开启文件类型侦测
 filetype on
 " 根据侦测到的不同类型加载对应的插件
@@ -29,6 +32,7 @@ colorscheme dracula
 
 " 高亮光标所在行
 set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
 
 " 打开文件时给出automplete提示
 " vim 自身命令行模式智能补全
@@ -54,6 +58,11 @@ map e <C-w>
 vnoremap <Leader>y "+y
 " " 设置快捷键将系统剪贴板内容粘贴至 vim
 nmap <Leader>p "+p
+
+nmap <Up> k
+nmap <Down> j
+nmap <Left> h
+nmap <Right> l
 
 " 让配置变更立即生效
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
