@@ -1,0 +1,17 @@
+$ git clone https://github.com/panhaidong/vim.git
+Cloning into 'vim'...
+remote: Enumerating objects: 11, done.
+remote: Total 11 (delta 0), reused 0 (delta 0), pack-reused 11
+Unpacking objects: 100% (11/11), done.
+$ cd vim
+$ git submodule init
+Submodule 'bundle/dracula-theme' (https://github.com/dracula/vim.git) registered for path 'bundle/dracula-theme'
+Submodule 'bundle/vim-sensible' (git://github.com/tpope/vim-sensible.git) registered for path 'bundle/vim-sensible'
+$ git submodule update
+Cloning into '/data/home/haidong/vim/bundle/dracula-theme'...
+Cloning into '/data/home/haidong/vim/bundle/vim-sensible'...
+Submodule path 'bundle/dracula-theme': checked out 'ad843ec594eccf1ba8595e034ca1c965ff41f39e'
+Submodule path 'bundle/vim-sensible': checked out '9e91be7e0fb42949831fe3161ef583363648aa58'
+$ cd ..
+$ mv vim .vim
+$ ln -s .vim/vimrc .vimrc
